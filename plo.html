@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        ul {
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+            margin-left: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: DodgerBlue;
+        }
+
+        a:hover {
+            color: rgb(26, 52, 133);
+        }
+        .btn {
+            background-color: DodgerBlue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+    </style>
+
+    <title>Download apk</title>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="https://nazmulislamtamimgit.github.io/nazmulislam/#hero">Home</a></li>
+        <li><a href="https://nazmulislamtamimgit.github.io/nazmulislam/#about">About</a></li>
+        <li><a href="https://nazmulislamtamimgit.github.io/nazmulislam/#contact">contact</a></li>
+    </ul>
+
+
+
+    <button id="dbutton" class="btn"><i class="fa fa-download"></i> Download</button>
+
+
+
+
+    <script>
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            const downloadButton = document.getElementById("dbutton");
+
+            downloadButton.addEventListener("click", function () {
+                // Replace with the actual URL of your APK file
+                const apkUrl = "bdimg.jpg";
+
+                // Create an anchor element
+                const downloadLink = document.createElement("a");
+                downloadLink.href = apkUrl;
+                downloadLink.download = "bdimg.jpg";
+
+                // Trigger a click event to start the download
+                downloadLink.click();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
